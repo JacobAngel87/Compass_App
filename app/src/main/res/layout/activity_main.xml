@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3D237"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/comp_back"
+        android:layout_width="410dp"
+        android:layout_height="536dp"
+        android:contentDescription="@string/comp_back"
+        app:layout_constraintBottom_toTopOf="@+id/reset_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/compass_back" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="ResetButton"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comp_back" />
+
+    <ImageView
+        android:id="@+id/comp_point"
+        android:layout_width="276dp"
+        android:layout_height="298dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="122dp"
+        android:contentDescription="@string/comp_point"
+        app:layout_constraintBottom_toBottomOf="@+id/comp_back"
+        app:layout_constraintStart_toStartOf="@+id/comp_back"
+        app:layout_constraintTop_toTopOf="@+id/comp_back"
+        app:srcCompat="@drawable/compass_arrow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
