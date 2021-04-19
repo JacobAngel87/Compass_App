@@ -3,4 +3,5 @@
     <string name="reset">Reset</string>
     <string name="comp_back">comp_back</string>
     <string name="comp_point">comp_point</string>
+    <string name="splash_text">Compass App</string>
 </resources>

@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private float[] floatOrientation = new float[3];
     private float[] floatRotationMatrix = new float[9];
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 SensorManager.getRotationMatrix(floatRotationMatrix,null, floatGravity,floatGeoMagnetic);
                 SensorManager.getOrientation(floatRotationMatrix,floatOrientation);
 
-                imageView.setRotation((float) (-floatOrientation[0]*180/3.14159));
-                compBack.setRotation((float) (-floatOrientation[0]*180/3.14159));
+                imageView.setRotation((float) (-floatOrientation[0]*180/Math.PI));
+                compBack.setRotation((float) (-floatOrientation[0]*180/Math.PI));
             }
 
             @Override
@@ -88,7 +86,4 @@ public class MainActivity extends AppCompatActivity {
       imageView.setRotation(180);
       compBack.setRotation(180);
     }
-
-
-
 }/* end main */
