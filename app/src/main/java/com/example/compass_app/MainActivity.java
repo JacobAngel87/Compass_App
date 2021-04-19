@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
+    private ImageView compBack;
     private SensorManager sensorManager;
     private Sensor sensorAccelerometer;
     private Sensor sensorMagneticField;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.comp_point);
+        compBack = findViewById(R.id.comp_back);
 
         /*allows for access to the sensors Accelerometer and Magnetic Field*/
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 SensorManager.getOrientation(floatRotationMatrix,floatOrientation);
 
                 imageView.setRotation((float) (-floatOrientation[0]*180/3.14159));
+                compBack.setRotation((float) (-floatOrientation[0]*180/3.14159));
             }
 
             @Override
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                SensorManager.getOrientation(floatRotationMatrix,floatOrientation);
 
                imageView.setRotation((float) (-floatOrientation[0]*180/3.14159));
+               compBack.setRotation((float) (-floatOrientation[0]*180/3.14159));
 
            }
 
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }/* end onCreate */
     public void ResetButton (View view){
       imageView.setRotation(180);
+      compBack.setRotation(180);
     }
 
 
